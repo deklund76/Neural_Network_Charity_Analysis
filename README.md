@@ -12,11 +12,13 @@ The purpose of this analysis was to create a machine learning model to predict w
 ![Dropped Variables](https://github.com/deklund76/Neural_Network_Charity_Analysis/blob/main/Resources/dropped_variables.png)
   * The EIN (Ids) and NAME variables were unnecessary for the model and were removed
 * ### Compiling, Training, and Evaluating the Model
+ * The target performance of 75% could not be achieved in either the first or second interations of the model.
+![Model1 Performance](https://github.com/deklund76/Neural_Network_Charity_Analysis/blob/main/Resources/model1_performance.png)
+![Model2 Performance](https://github.com/deklund76/Neural_Network_Charity_Analysis/blob/main/Resources/model2_performance.png)
 ![Model1](https://github.com/deklund76/Neural_Network_Charity_Analysis/blob/main/Resources/model1.png)
   * The initial model used 80 first layer nodes and 30 second layer nodes with relu activation functions. 80 since that was about double the number of input nodes (43) and 30 on the second since that was just under half of the first layer following simple rules of thumb.
-  * The target performance of 75% could not be achieved in either the first or second interations of the model.
 ![Model2](https://github.com/deklund76/Neural_Network_Charity_Analysis/blob/main/Resources/model2.png)
-  * The optimized model attempted to increase performance by changing (in different combinations before finally all together) the number of hidden layers to 3 with 120, 60, and 30 nodes respectively; the activation functions to hyperbolic tangent functions; and dropping the ASK_AMT variable since it contained large outliers. This unfortunately only improved model performance to 74%.
+  * The optimized model attempted to increase performance by changing (in different combinations before finally all together) the number of hidden layers to 3 with 120, 60, and 30 nodes respectively; the activation functions to hyperbolic tangent functions; and dropping the ASK_AMT variable since it contained large outliers. This unfortunately failed to improve model performance.
 
 ## Summary
 Overall the results were promising, but fell just short of the performance target. It's recommened that different models are tried to achieve higher performance while also using fewer resources. A good place to start would be with a random forest classifier model as the analysis of feature importance could prove useful in further optimization.
